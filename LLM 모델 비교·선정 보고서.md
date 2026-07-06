@@ -10,16 +10,148 @@ Gemini 3 Flash, Claude Haiku 4.5, GPT-5.4 mini를 이들의 상위 모델인 Gem
 
 그렇게 최종 결과물을 각 상위 모델들에게 평가해달라 했을 때 아래와 같은 결과가 나왔습니다.
 
+
 ### Gemini 3.1 Pro
 
+| 평가 축 | Claude Haiku | Gemini Flash | GPT-4o mini |
+| :--- | :---: | :---: | :---: |
+| **1. 정확성 (환각 통제)** | 5점 | 1점 | 2점 |
+| **2. 지시 이해 (양식 준수)** | 3점 | 4점 | 5점 |
+| **3. 안전성 (예외 처리)** | 5점 | 2점 | 3점 |
+| **4. 실무 유용성** | 5점 | 2점 | 3점 |
+| **총점 (20점 만점)** | **18점** | **9점** | **13점** |
+
+1. 클로드 2. GPT 3. Gemini
+
+
+### Claude Sonnet 4.6
+
+| 평가 축 | Claude Haiku 4.5 | Gemini 3 Flash | GPT-5.4 Mini |
+| :--- | :---: | :---: | :---: |
+| **① 지침 이해도** | 2 | 5 | 5 |
+| **② 표 완성도** | 1 | 5 | 4 |
+| **③ 능동적 분석력** | 1 | 5 | 3 |
+| **④ 확인 질문 품질** | 1 | 5 | 3 |
+| **⑤ 근거 표기 일관성** | 1 | 5 | 5 |
+| **⑥ 가독성/실용성** | 4 | 3 | 5 |
+| **🏁 총점 (30점 만점)** | **10** | **28** | **25** |
+
+1. Gemini 2. GPT 3. 클로드
+
+
+### GPT-5.4
+
+| 평가 축 | Claude Haiku 4.5 | GPT-5.4 mini | Gemini 3 Flash |
+| :--- | :---: | :---: | :---: |
+| **1. 정확성(사실 통제)** | 4/5 | 2/5 | 2/5 |
+| **2. 안전성(환각 방지)** | 5/5 | 2/5 | 2/5 |
+| **3. 형식/구조 완성도** | 3/5 | 4/5 | 5/5 |
+| **4. 지시 준수도** | 4/5 | 3/5 | 3/5 |
+| **총점** | **16/20** | **11/20** | **12/20** |
+
+1. 클로드 2. Gemini 3. GPT
+
+
+
+
 ```text
-| 평가 축 |	Claude Haiku |	Gemini Flash |	GPT-4o mini |
-| --- | --- | --- | --- |
-|1. 정확성(환각 통제) |	5점 |	1점 |	2점 |
-|2. 지시 이해(양식 준수) |	3점 |	4점 |	5점 | 
-|3. 안전성(예외 처리) |	5점 |	2점 |	3점 |
-|4. 실무 유용성 |	5점 |	2점 |	3점 |
-|총점(20점 만점) |	18점 |	9점 |	13점 |
+따라서 Claud haiku 4.5 가 가장 유용한 AI로 판별이 났습니다.
 ```
 
-dd
+
+
+
+## 시스템 설계 문서
+
+
+<img width="940" height="1005" alt="스크린샷 2026-07-06 113341" src="https://github.com/user-attachments/assets/253c9994-4785-4148-a78e-e97e08e78f88" />
+<img width="938" height="1006" alt="스크린샷 2026-07-06 113355" src="https://github.com/user-attachments/assets/3205b24b-6e67-4dd6-8d8c-3757aa3adeb2" />
+
+아무런 지시 없이 그냥 회의록만 올리고 정리를 부탁했을 때 이런 식으로 답변이 왔습니다. (v1)
+
+이후
+
+<img width="514" height="386" alt="스크린샷 2026-07-06 113808" src="https://github.com/user-attachments/assets/aa32c07d-5eda-49b1-bf4e-63f58978922b" />
+
+이런 식으로 자동화 과업 및 페르소나 시스템 프롬프트를 설계 했습니다.
+
+이 후엔
+
+<img width="802" height="152" alt="스크린샷 2026-07-06 113915" src="https://github.com/user-attachments/assets/42537d3e-70ab-4d5c-a855-187df3896ef5" />
+
+이런 식으로 Few shot으로 점검을 해줬더니 최종적으로는
+
+<img width="942" height="1016" alt="스크린샷 2026-07-06 114023" src="https://github.com/user-attachments/assets/74bc823d-e125-4b5c-bc6c-0018449cf661" />
+<img width="936" height="1008" alt="스크린샷 2026-07-06 114029" src="https://github.com/user-attachments/assets/8992abb9-0c67-49b0-ad20-c2f81df5a6bd" />
+<img width="934" height="998" alt="스크린샷 2026-07-06 114035" src="https://github.com/user-attachments/assets/2613c3ca-91d9-48a5-9e5b-c093c101124a" />
+<img width="938" height="997" alt="스크린샷 2026-07-06 114040" src="https://github.com/user-attachments/assets/0674d9cc-2312-4349-9830-b968045b19f7" />
+
+이런 식의 결론이 나왔습니다. (v2)
+
+환각 검증 역시 진행해봤고
+
+<img width="411" height="187" alt="스크린샷 2026-07-06 114258" src="https://github.com/user-attachments/assets/080d64be-539b-436a-8a6e-230a3dbf93aa" />
+<img width="753" height="655" alt="스크린샷 2026-07-06 114306" src="https://github.com/user-attachments/assets/6f133c3c-66a1-41a7-be51-80978787bf03" />
+<img width="750" height="416" alt="스크린샷 2026-07-06 114312" src="https://github.com/user-attachments/assets/0b420f52-a949-4e9a-b333-5de44aeb7db8" />
+
+이런 식의 결론이 나왔습니다.
+
+다만 완벽하진 않은데
+
+1번과 3번의 경우 정확하게 판별을 해냈지만
+
+2번과 4번, 5번에서는 해매는 듯한 모습을 보였습니다.
+
+따라서 이를 해결하기 위해선 새로운 설계가 필요해 보였고
+
+이후 새로 만들어낸 프롬프트는 다음과 같습니다.
+
+
+v1 : 내용 정리해줘
+
+v2 :
+당신은 10년차 프로젝트 매니저입니다.
+
+1. 대화가 끝날 때까지 지금까지 확정된 모든 요구사항을 계속 유지하세요. 사용자가 새로운 조건을 추가하면 기존 조건은 유지하고, 변경을 명시한 부분만 수정하세요.
+
+2. 회의록을 분석하여 아래 항목을 표 형식으로 작성하세요.
+   - 결정사항
+   - 해야 할 일(Action Items)
+   - 위험 요소(Risk)
+   - 다음 일정(Next Schedule)
+
+3. 해야 할 일은 담당자별로 구분하여 작성하고, 특히 작가가 반드시 수행해야 하는 업무는 빠짐없이 포함하세요.
+
+4. 정보가 부족하거나 회의록에서 확인되지 않는 내용은 절대 추측하지 마세요.
+   - 확인 가능한 경우: 근거와 함께 답변
+   - 확인 불가능한 경우: "알 수 없음" 또는 "확인 필요"로 표시
+   - 정보가 부족하면 필요한 내용만 간단히 확인 질문하세요.
+
+5. 최종 결과는 다음 순서로 출력하세요.
+   ① 결정사항
+   ② 해야 할 일
+   ③ 위험 요소
+   ④ 다음 일정
+   ⑤ 확인 필요 사항
+   ⑥ 참석자별 최종 해야 할 일(각 사람당 한 문장)
+
+
+
+### 실행로그
+
+
+   이 프롬프트를 이용해 7턴 이상의 대화로그 및 문맥유지 검증을 해보았습니다.
+
+<img width="878" height="419" alt="스크린샷 2026-07-06 121551" src="https://github.com/user-attachments/assets/f04dc025-8b4c-4f6b-84b9-00294ec0e459" />
+<img width="868" height="392" alt="스크린샷 2026-07-06 121604" src="https://github.com/user-attachments/assets/76ab24f2-608b-4c88-a9b8-1f09bedacb18" />
+<img width="866" height="401" alt="스크린샷 2026-07-06 121610" src="https://github.com/user-attachments/assets/1d6891ca-ce1e-43e3-861f-fa4c3070cffa" />
+<img width="854" height="404" alt="스크린샷 2026-07-06 121615" src="https://github.com/user-attachments/assets/c7740109-d722-4e6b-99fe-e16ab457d172" />
+<img width="853" height="397" alt="스크린샷 2026-07-06 121620" src="https://github.com/user-attachments/assets/7a83c1ae-496a-47e4-9475-a1e1af96c833" />
+<img width="866" height="258" alt="스크린샷 2026-07-06 121626" src="https://github.com/user-attachments/assets/ece5b8d6-6d8c-40c1-b679-9b76b8d0ac6e" />
+<img width="864" height="414" alt="스크린샷 2026-07-06 121631" src="https://github.com/user-attachments/assets/679f4c0b-7838-41d0-b105-fc3ac2b025e9" />
+<img width="861" height="369" alt="스크린샷 2026-07-06 121637" src="https://github.com/user-attachments/assets/447ce881-fc98-40f5-9ac8-b96fab4d16a6" />
+<img width="853" height="378" alt="스크린샷 2026-07-06 121644" src="https://github.com/user-attachments/assets/da7f0f2e-4a36-4f43-a0df-9713dd5c1d9c" />
+<img width="855" height="402" alt="스크린샷 2026-07-06 121649" src="https://github.com/user-attachments/assets/861c5273-89ca-4626-90d0-97a6a9330e7a" />
+<img width="864" height="394" alt="스크린샷 2026-07-06 121655" src="https://github.com/user-attachments/assets/e76598ee-cf63-4f88-b456-96c598cc5bdc" />
+
+보시다 시피 성공적으로 검증했습니다.
