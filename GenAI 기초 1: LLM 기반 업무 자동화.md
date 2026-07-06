@@ -1,5 +1,8 @@
 # LLM 모델 비교·선정 보고서
 
+
+앞서, 이 자료는 Gemini 3 Flash, Claude Haiku 4.5, GPT-5.4 mini, Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.4를 웹에서 2026.7.6 ~ 7.7 동안 사용했습니다.
+
 ## 모델 비교
 
 Gemini 3 Flash, Claude Haiku 4.5, GPT-5.4 mini를 이들의 상위 모델인 Gemini 3.1 Pro, Claude Sonnet 4.6, GPT-5.4가 각각 평가하도록 해봤습니다.
