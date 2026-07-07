@@ -102,7 +102,9 @@ Smooth cinematic transitions, realistic lighting, premium refreshing commercial 
 
 <img width="1190" height="671" alt="스크린샷 2026-07-07 093732" src="https://github.com/user-attachments/assets/5d481742-7220-4a89-a1fc-cd3ba0870fe3" />
 
-너무 흐릿해서 프롬프트 수정을 필요로 함.
+세번째 장면의 영상의 일부임. 너무 흐릿해서 프롬프트 수정을 필요로 함.
+
++ 라임이 짜지는 장면이 다양한 장면으로 구성되면 좋겠다 생각해서 한개를 더 추가 하기로 함
 
 <img width="944" height="168" alt="스크린샷 2026-07-07 093859" src="https://github.com/user-attachments/assets/0d774e82-311f-4969-b44e-a1207820ede1" />
 
@@ -120,7 +122,7 @@ https://github.com/user-attachments/assets/f223e9fc-0885-404c-b57c-7a06d3225974
 https://github.com/user-attachments/assets/87b90929-7d36-4b35-924c-d3590b7fcf86
 
 
-# 보너스
+# 보너스 3
 
 
 
