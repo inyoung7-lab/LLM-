@@ -104,7 +104,7 @@ Smooth cinematic transitions, realistic lighting, premium refreshing commercial 
 
 세번째 장면의 영상의 일부임. 너무 흐릿해서 프롬프트 수정을 필요로 함.
 
-+ 라임이 짜지는 장면이 다양한 장면으로 구성되면 좋겠다 생각해서 한개를 더 추가 하기로 함
+더불어 라임이 짜지는 장면이 다양한 장면으로 구성되면 좋겠다 생각해서 한개를 더 추가 하기로 함
 
 <img width="944" height="168" alt="스크린샷 2026-07-07 093859" src="https://github.com/user-attachments/assets/0d774e82-311f-4969-b44e-a1207820ede1" />
 
